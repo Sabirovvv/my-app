@@ -27,8 +27,9 @@ class Contacts extends React.Component{
                         <div className="time-work">
                             <div className="work-title">Режим работы</div>
                             <div className="clock-icon">
-                                <FontAwesomeIcon icon={faClock}/>
+                                <FontAwesomeIcon icon={faClock}/> 08:00 - 17:00
                             </div>
+                            <p>Суббота, Воскресенье - выходные дни.</p>
                         </div>
                     </div>
                 </div>

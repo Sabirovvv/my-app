@@ -21,11 +21,31 @@
     text-align: right;
 }
 
+.time-work {
+    margin-top: 30px;
+}
+
 .contact-title {
     font-size: 30px;
     font-weight: bold;
     color: #3f3f3f;
+}
 
+.work-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3f3f3f;
+}
+
+.clock-icon {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.time-work p {
+    font-weight: bolder;
+    font-size: 18px;
+    color: #ff2121;
 }
 
 .contact button {
