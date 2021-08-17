@@ -12,7 +12,7 @@ class Post extends React.Component{
                     <span className="create_date">31.07.2021 19:59</span>
                 </div>
                 <div className="postcard_img">
-                    <img className="postcard__img" src="https://picsum.photos/1200/200?grayscale" alt=""/>
+                    <img className="postcard__img" src="https://picsum.photos/1200/200" alt=""/>
                 </div>
                 <div className="postcard_title">
                     <h1>JPEG, который можно посмотреть в блокноте</h1>
@@ -34,21 +34,16 @@ class Post extends React.Component{
                 </div>
             </div>
 
+
             <div className="comments-blocks">
-                <h2 className="comments-blocks__title">Комментарии <span
-                    className="comments-blocks__counter">5</span></h2>
-                <div className="comments-blocks__form">
-                    <div className="">
-                        <label htmlFor="name">Имя</label><br/>
-                        <input className="form-control" id="name" type="text"/>
-                    </div>
-                    <div className="">
-                        <label htmlFor="text">Сообщение</label><br/>
-                        <textarea className="form-control" id="text" cols="50" rows="6"></textarea>
-                    </div>
-                    <div className="text-center mt-2">
-                        <button className="btn btn-primary">Отправить</button>
-                    </div>
+                <h2 className="comments-blocks-title">Комментарии: <span
+                    className="comments-blocks__counter">1</span></h2>
+                <div className="comments-blocks-form">
+                    <label htmlFor="name">Имя</label><br/>
+                    <input id="name" type="text"/><br/>
+                    <label htmlFor="text">Сообщение</label><br/>
+                    <textarea id="text" cols="50" rows="6"></textarea><br/>
+                    <button>Отправить</button>
                 </div>
             </div>
         </div>
