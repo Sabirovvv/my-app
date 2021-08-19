@@ -13,7 +13,7 @@ class App extends React.Component{
                     <Header/>
                     <div className="container-center">
                         <Route component={Posts} path="/posts"/>
-                        <Route component={Post} path="/onePost"/>
+                        <Route component={Post} path="/post/:id"/>
                         <Route component={Contacts} path="/contacts"/>
                     </div>
                 </BrowserRouter>

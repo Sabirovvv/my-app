@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.css';
+import {Link} from "react-router-dom";
 
 class Header extends React.Component{
     render(){
@@ -7,10 +8,9 @@ class Header extends React.Component{
             <div className="header shadow-sm">
                 <a href="#" className="logo">Logotype</a>
                 <div className="header-right">
-                    <a className="active" href="http://localhost:3000/posts">Все</a>
-                    <a href="#">Новости</a>
-                    <a href="http://localhost:3000/onePost">Статьи</a>
-                    <a href="http://localhost:3000/contacts">Контакты</a>
+                    <Link to="/posts">Все</Link>
+                    <Link to="#">Новости</Link>
+                    <Link to="/contacts">Контакты</Link>
                 </div>
             </div>
         )

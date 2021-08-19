@@ -5,6 +5,11 @@
     margin-right: 10px;
 }
 
+.comments-blocks {
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
 label {
     font-size: 18px;
     padding: 0 0 4px 0;

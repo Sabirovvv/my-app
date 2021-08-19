@@ -2,6 +2,31 @@ import React from 'react';
 import styles from './Post.module.css';
 
 class Post extends React.Component{
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            postData:{}
+        }
+    }
+
+    componentDidMount() {
+        this.getPostById();
+    }
+
+    getPostById() {
+        const url = 'http://localhost:3001/posts/' + this.props.match.params.id;
+
+        fetch(url)
+            .then(response => {
+                if (response.ok){
+                    return response.json();
+                } else {
+                    alert('Ошибка: статус ' + response.status);
+                }
+            })
+            .then(data => this.setState({postData: data}))
+    }
 
     render(){
         return (
@@ -12,10 +37,10 @@ class Post extends React.Component{
                     <span className="create_date">31.07.2021 19:59</span>
                 </div>
                 <div className="postcard_img">
-                    <img className="postcard__img" src="https://picsum.photos/1200/200" alt=""/>
+                    <img className="postcard__img" src={this.state.postData.image} alt=""/>
                 </div>
                 <div className="postcard_title">
-                    <h1>JPEG, который можно посмотреть в блокноте</h1>
+                    <h1>{this.state.postData.title}</h1>
                 </div>
                 <div className="postcard_desc">
                     <p>
@@ -35,15 +60,15 @@ class Post extends React.Component{
             </div>
 
 
-            <div className="comments-blocks">
+            <div className={styles["comments-blocks"]}>
                 <h2 className="comments-blocks-title">Комментарии: <span
                     className="comments-blocks__counter">1</span></h2>
                 <div className="comments-blocks-form">
                     <label htmlFor="name">Имя</label><br/>
-                    <input id="name" type="text"/><br/>
+                    <input className={styles.input} id="name" type="text"/><br/>
                     <label htmlFor="text">Сообщение</label><br/>
-                    <textarea id="text" cols="50" rows="6"></textarea><br/>
-                    <button>Отправить</button>
+                    <textarea className={styles.textarea} id="text" cols="50" rows="6"/><br/>
+                    <button className={styles.button}>Отправить</button>
                 </div>
             </div>
         </div>
