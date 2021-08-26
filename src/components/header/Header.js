@@ -6,7 +6,7 @@ class Header extends React.Component{
     render(){
         return (
             <div className="header shadow-sm">
-                <a href="#" className="logo">Logotype</a>
+                <Link to="/posts" className="logo">Logotype</Link>
                 <div className="header-right">
                     <Link to="/posts">Все</Link>
                     <Link to="#">Новости</Link>

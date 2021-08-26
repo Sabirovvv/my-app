@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Post.module.css';
+import Comment from "../../components/comment/Comment";
 
 class Post extends React.Component{
     constructor(props) {
@@ -59,18 +60,7 @@ class Post extends React.Component{
                 </div>
             </div>
 
-
-            <div className={styles["comments-blocks"]}>
-                <h2 className="comments-blocks-title">Комментарии: <span
-                    className="comments-blocks__counter">1</span></h2>
-                <div className="comments-blocks-form">
-                    <label htmlFor="name">Имя</label><br/>
-                    <input className={styles.input} id="name" type="text"/><br/>
-                    <label htmlFor="text">Сообщение</label><br/>
-                    <textarea className={styles.textarea} id="text" cols="50" rows="6"/><br/>
-                    <button className={styles.button}>Отправить</button>
-                </div>
-            </div>
+            <Comment/>
         </div>
         );
     }
